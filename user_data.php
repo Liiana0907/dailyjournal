@@ -144,9 +144,9 @@
 </table>
 
 <?php
-$sql1 = "SELECT * FROM user";
-$hasil1 = $conn->query($sql1);
-$total_records = $hasil1->num_rows;
+$sql3 = "SELECT * FROM user";
+$hasil3 = $conn->query($sql3);
+$total_records = $hasil3->num_rows;
 ?>
 <p>Total User : <?php echo $total_records; ?></p>
 <nav class="mb-2">

@@ -65,7 +65,7 @@
                                             <label for="formGroupExampleInput" class="form-label">Judul</label>
                                             <input type="hidden" name="id" value="<?= $row["id"] ?>">
                                             <input type="text" class="form-control" name="judul"
-                                                placeholder="Tuliskan Judul Artikel" value="<?= $row["judul"] ?>" required>
+                                                placeholder="Tuliskan Judul Gambar" value="<?= $row["judul"] ?>" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="formGroupExampleInput2" class="form-label">Ganti Gambar</label>
@@ -134,9 +134,9 @@
 </table>
 
 <?php
-$sql1 = "SELECT * FROM gallery";
-$hasil1 = $conn->query($sql1);
-$total_records = $hasil1->num_rows;
+$sql2 = "SELECT * FROM gallery";
+$hasil2 = $conn->query($sql2);
+$total_records = $hasil2->num_rows;
 ?>
 <p>Total gallery : <?php echo $total_records; ?></p>
 <nav class="mb-2">
