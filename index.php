@@ -411,7 +411,7 @@ include "koneksi.php";
       <a href="https://wa.me/+6285726170059"><i class="bi bi-whatsapp h2 p-2 icon-dark-mode"></i></a>
     </div>
     <div class="text-center mb-4 mt-1">
-      <h6>Tri Yuliana © 2024</h6>
+      <h6>Tri Yuliana © 2025</h6>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
