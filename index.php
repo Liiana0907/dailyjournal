@@ -105,7 +105,7 @@ include "koneksi.php";
             <a class="navLinka nav-link" href="#Schedule">Schedule</a>
           </li>
           <li class="nav-item">
-            <a class="navLinka nav-link" href="#profile">Aboute Me</a>
+            <a class="navLinka nav-link" href="#profile">About Me</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.php" target="_blank">Login</a>
