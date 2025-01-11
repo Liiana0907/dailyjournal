@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2025 at 06:59 PM
+-- Generation Time: Jan 09, 2025 at 05:59 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -56,19 +56,27 @@ INSERT INTO `article` (`id`, `judul`, `isi`, `gambar`, `tanggal`, `username`) VA
 
 CREATE TABLE `gallery` (
   `id` int(11) NOT NULL,
+  `judul` text CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `tanggal` datetime DEFAULT NULL,
-  `gambar` text DEFAULT NULL
+  `gambar` text CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `username` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `gallery`
 --
 
-INSERT INTO `gallery` (`id`, `tanggal`, `gambar`) VALUES
-(1, '2024-05-24 22:20:13', 'gambar4.jpeg'),
-(2, '2024-03-15 08:15:23', 'gambar2.jpg'),
-(3, '2024-03-03 19:21:13', 'gambar3.JPG'),
-(4, '2023-08-27 10:45:32', 'gambar1.jpeg');
+INSERT INTO `gallery` (`id`, `judul`, `tanggal`, `gambar`, `username`) VALUES
+(1, 'Bukber', '2025-01-03 22:16:15', 'gambar4.jpeg', 'admin'),
+(2, 'Holiday', '2025-01-03 22:27:51', 'gambar2.jpg', 'admin'),
+(3, 'Photo Both', '2025-01-03 22:27:34', 'gambar3.JPG', 'admin'),
+(4, 'Matrikulasi', '2025-01-03 22:28:03', 'gambar1.jpeg', 'admin'),
+(5, 'Last Matkul Probstat', '2025-01-03 22:44:34', '20250103224434.jpg', 'admin'),
+(6, 'After Sushi Time', '2025-01-03 22:46:53', '20250103224653.jpg', 'admin'),
+(7, 'Photois', '2025-01-03 22:48:04', '20250103224804.jpg', 'admin'),
+(8, 'Tom Sushi', '2025-01-03 22:48:38', '20250103224838.jpg', 'admin'),
+(9, '43UG1', '2025-01-03 22:49:12', '20250103224912.jpg', 'admin'),
+(10, 'Selfi Intan', '2025-01-03 22:50:26', '20250103225026.jpg', 'admin');
 
 -- --------------------------------------------------------
 
@@ -80,15 +88,23 @@ CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` text NOT NULL,
-  `foto` text NOT NULL
+  `foto` text NOT NULL,
+  `tanggal` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `foto`) VALUES
-(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '');
+INSERT INTO `user` (`id`, `username`, `password`, `foto`, `tanggal`) VALUES
+(4, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '20250105231733.jpg', '2025-01-05 23:17:33'),
+(5, 'lili', '0910e78d1c02cfcb9c5f3a2fc5f8ca9c', '20250105233546.jpg', '2025-01-05 23:35:46'),
+(6, 'nacia', '3c93f09e07ee1abce6338988a35cee4e', '20250105233731.jpeg', '2025-01-05 23:37:31'),
+(7, 'annisa', 'f25a9491a264bc80e5befcf20b5ded32', '20250105233851.jpg', '2025-01-05 23:38:51'),
+(9, 'liana', '8f074325ee71f9c2583a8790d76140a9', '20250105234051.jpg', '2025-01-05 23:40:51'),
+(11, 'danny', '21232f297a57a5a743894a0e4a801fc3', '20250105234454.png', '2025-01-09 00:26:07'),
+(12, 'cipa', '3429ceda24bbfa6f82f25014a68e5074', '20250106173334.jpg', '2025-01-06 17:33:34'),
+(15, 'syifa', '4172fdf7b322dceb3802d1374fb107fe', '20250106183649.jpg', '2025-01-06 18:36:49');
 
 --
 -- Indexes for dumped tables
@@ -126,13 +142,13 @@ ALTER TABLE `article`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

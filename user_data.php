@@ -37,7 +37,7 @@
                         if (file_exists('assets/' . $row["foto"] . '')) {
                             ?>
                             <div class="text-center">
-                            <img src="assets/<?= $row["foto"] ?>" width="100
+                                <img src="assets/<?= $row["foto"] ?>" width="100
                             ">
                             </div>
                             <?php
@@ -47,10 +47,10 @@
                 </td>
                 <td>
                     <div class="text-center">
-                    <a href="#" title="edit" class="badge rounded-pill text-bg-success" data-bs-toggle="modal"
-                        data-bs-target="#modalEdit<?= $row["id"] ?>"><i class="bi bi-pencil"></i></a>
-                    <a href="#" title="delete" class="badge rounded-pill text-bg-danger" data-bs-toggle="modal"
-                        data-bs-target="#modalHapus<?= $row["id"] ?>"><i class="bi bi-x-circle"></i></a>
+                        <a href="#" title="edit" class="badge rounded-pill text-bg-success" data-bs-toggle="modal"
+                            data-bs-target="#modalEdit<?= $row["id"] ?>"><i class="bi bi-pencil"></i></a>
+                        <a href="#" title="delete" class="badge rounded-pill text-bg-danger" data-bs-toggle="modal"
+                            data-bs-target="#modalHapus<?= $row["id"] ?>"><i class="bi bi-x-circle"></i></a>
                     </div>
 
                     <!-- Awal Modal Edit -->
@@ -73,10 +73,11 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="formGroupExampleInput" class="form-label">Password</label>
-                                            <input type="text" class="form-control" name="password" class="form-control" name="password"
-                                                placeholder="Tuliskan Password" value="<?= $row["password"] ?>" required>
+                                            <input type="text" class="form-control" name="password" class="form-control"
+                                                name="password" placeholder="Tuliskan Password"
+                                                value="<?= $row["password"] ?>" required>
                                         </div>
-                                        
+
                                         <div class="mb-3">
                                             <label for="formGroupExampleInput2" class="form-label">Ganti Foto</label>
                                             <input type="file" class="form-control" name="foto">
